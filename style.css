@@ -1,0 +1,300 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --paper: #f6f1e8;
+    --paper-deep: #eee5d6;
+    --ink: #29251f;
+    --muted: #756b5f;
+    --accent: #8a6f52;
+    --line: #d9cdbb;
+    --white: #fffdf8;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Inter", sans-serif;
+    line-height: 1.75;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.site-header {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 28px 28px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.55rem;
+    letter-spacing: .18em;
+}
+
+.nav-link {
+    color: var(--muted);
+    font-size: .82rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.nav-link:hover { color: var(--ink); }
+
+.hero {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 95px 28px 110px;
+    text-align: center;
+}
+
+.eyebrow {
+    margin: 0 0 22px;
+    color: var(--accent);
+    font-size: .72rem;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(4rem, 11vw, 8.5rem);
+    line-height: .78;
+    font-weight: 500;
+    letter-spacing: .02em;
+}
+
+.tagline {
+    margin: 35px auto 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1.35rem, 2.5vw, 2rem);
+    font-style: italic;
+    color: var(--muted);
+}
+
+.hero-intro {
+    max-width: 600px;
+    margin: 25px auto 0;
+    color: var(--muted);
+    font-size: .95rem;
+}
+
+.books-section {
+    border-top: 1px solid var(--line);
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 75px 28px 110px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 48px;
+}
+
+.section-heading h2 {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.section-heading span {
+    color: var(--muted);
+    font-size: .78rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px 55px;
+}
+
+.book-card {
+    display: block;
+}
+
+.cover {
+    aspect-ratio: 3 / 4;
+    max-width: 300px;
+    margin-bottom: 25px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid var(--line);
+    background: var(--paper-deep);
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.book-card:hover .cover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(65, 50, 35, .10);
+}
+
+.cover-number {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.1rem;
+    color: var(--accent);
+}
+
+.cover-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.25rem;
+    line-height: 1;
+    max-width: 230px;
+}
+
+.cover-author {
+    font-size: .7rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.book-card h3 {
+    margin: 0 0 5px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.book-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: .85rem;
+}
+
+.site-footer {
+    border-top: 1px solid var(--line);
+    padding: 35px 28px;
+    text-align: center;
+    color: var(--muted);
+    font-size: .75rem;
+    letter-spacing: .05em;
+}
+
+/* Review pages */
+
+.review-main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 70px 28px 110px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 60px;
+    color: var(--muted);
+    font-size: .78rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.back-link:hover { color: var(--ink); }
+
+.review-header {
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 50px;
+}
+
+.review-header .eyebrow {
+    margin-bottom: 18px;
+}
+
+.review-header h1 {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(3.3rem, 8vw, 6.5rem);
+    line-height: .9;
+    font-weight: 500;
+}
+
+.author {
+    margin: 20px 0 0;
+    color: var(--muted);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.35rem;
+    font-style: italic;
+}
+
+.review-cover {
+    margin: 55px auto;
+    width: min(300px, 80%);
+    aspect-ratio: 3 / 4;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--paper-deep);
+    border: 1px solid var(--line);
+}
+
+.review-cover .cover-title {
+    font-size: 2.5rem;
+}
+
+.review-body {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.28rem;
+    line-height: 1.65;
+}
+
+.review-body h2 {
+    margin-top: 65px;
+    margin-bottom: 18px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.review-body p {
+    margin: 0 0 25px;
+}
+
+.review-end {
+    margin-top: 65px;
+    padding-top: 35px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-style: italic;
+}
+
+.next-book {
+    margin-top: 80px;
+    padding: 25px 0;
+    border-top: 1px solid var(--line);
+    text-align: center;
+    color: var(--muted);
+    font-size: .8rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.next-book a:hover { color: var(--ink); }
+
+@media (max-width: 700px) {
+    .site-header { padding: 22px 20px 10px; }
+    .hero { padding: 70px 20px 80px; }
+    .books-section { padding: 55px 20px 80px; }
+    .book-grid { grid-template-columns: 1fr; gap: 55px; }
+    .cover { max-width: 280px; }
+    .section-heading { display: block; }
+    .section-heading span { display: block; margin-top: 8px; }
+    .review-main { padding: 45px 20px 80px; }
+    .review-body { font-size: 1.18rem; }
+}
